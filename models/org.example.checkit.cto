@@ -94,12 +94,12 @@ transaction CreateConsumer{
 
 transaction ManufacturePhone{
    o String serial
-  o Integer cashValue
+   o Integer cashValue
 }
 
-// transaction CreateBatch{
-//   o Batch batch
-// }
+transaction CreateBatch{
+  o Batch batch
+}
 
 transaction Transfer{
   --> Phone phone
