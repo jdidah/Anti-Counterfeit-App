@@ -1,0 +1,147 @@
+<div class="container-scroller">
+  <!-- partial:partials/_horizontal-navbar.html -->
+  <nav class="navbar horizontal-layout col-lg-12 col-12 p-0">
+    <div class="nav-top flex-grow-1">
+      <div class="container d-flex flex-row h-100">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-top">
+          <a class="navbar-brand brand-logo" routerLink="/"><img src="assets/img/logo-white.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" routerLink="/"><img src="assets/img/logo-white.png" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+          <ul class="navbar-nav navbar-nav-right mr-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                <i class="icon-bell"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                aria-labelledby="notificationDropdown">
+                <a class="dropdown-item py-3">
+                  <p class="mb-0 font-weight-medium float-left">You have 4 new notifications
+                  </p>
+                  <span class="badge badge-pill badge-inverse-info float-right">View all</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-inverse-success">
+                      <i class="icon-exclamation mx-0"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal text-dark mb-1">Application Error</h6>
+                    <p class="font-weight-light small-text mb-0">
+                      Just now
+                    </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-inverse-warning">
+                      <i class="icon-bubble mx-0"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal text-dark mb-1">Settings</h6>
+                    <p class="font-weight-light small-text mb-0">
+                      Private message
+                    </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-inverse-info">
+                      <i class="icon-user-following mx-0"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal text-dark mb-1">New user registration</h6>
+                    <p class="font-weight-light small-text mb-0">
+                      2 days ago
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item dropdown nav-profile">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown">
+                <img src="assets/img/user.png" class="rounded-circle" alt="profile" />&nbsp;
+                <span class="nav-profile-text">User</span>
+              </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                  aria-labelledby="profileDropdown">
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item" routerLink="/profile">
+                    Profile
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item preview-item" href="javascript:void()" routerLink="/auth/login" (click)="logout()">
+                    Log Out
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  </div>
+
+            </li>
+          </ul>
+          <button class="navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="icon-menu text-white"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="nav-bottom">
+      <div class="container">
+        <ul class="nav page-navigation">
+          <li class="nav-item">
+            <a routerLink="/" class="nav-link"><i class="link-icon icon-screen-desktop"></i><span
+                class="menu-title">Dashboard</span></a>
+          </li>
+          <li class="nav-item">
+              <a routerLink="/transfer" class="nav-link"><i class="link-icon icon-directions"></i><span
+                  class="menu-title">Transfer</span></a>
+            </li>
+          <li class="nav-item">
+            <a routerLink="/assets" class="nav-link"><i class="link-icon icon-briefcase"></i><span
+                class="menu-title">Phones</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:void()" class="nav-link"><i class="link-icon icon-grid"></i><span
+                class="menu-title">Stakeholders</span><i class="menu-arrow"></i></a>
+            <div class="submenu">
+              <ul class="submenu-item">
+                <li class="nav-item"><a class="nav-link" routerLink="/stakeholders/consumer">Consumer</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/stakeholders/manufacturer">Manufacturer</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/stakeholders/retailer">Retailer</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/stakeholders/wholesaler">Wholesaler</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/users" class="nav-link"><i class="link-icon icon-people"></i><span
+                class="menu-title">User Management</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- partial -->
+  <div class="container-fluid page-body-wrapper">
+    <div class="main-panel">
+      <router-outlet></router-outlet>
+      <!-- content-wrapper ends -->
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="w-100 clearfix">
+          <span class="d-block text-center text-sm-left d-sm-inline-block">Copyright © 2019 <a
+              href="javascript:void()">Blockchain</a>. All rights reserved.</span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"><a href="javascript:void()">About Us</a></span>
+        </div>
+      </footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+</div>

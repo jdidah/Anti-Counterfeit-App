@@ -1,0 +1,100 @@
+<div class="content-wrapper">
+    <div class="page-title">
+      <div class="float-right">
+        <button (click)="newRecord(addModal)" class="btn btn-primary btn-sm"><i class="link-icon icon-plus"></i> Add</button>
+        <button (click)="rerender()" class="btn btn-primary btn-sm ml-3"><i class="link-icon icon-refresh"></i> Refresh</button>
+      </div>
+      <h4>Stakeholders</h4>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body table-responsive">
+            <mat-form-field>
+              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>
+              <table mat-table [dataSource]="dataSource" matSort>
+
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                  <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="type">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+                    <td mat-cell *matCellDef="let row"> {{row.type}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="description">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+                      <td mat-cell *matCellDef="let row"> {{row.description}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="actions">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+                      <td mat-cell *matCellDef="let row">
+                        <a class="btn btn-primary btn-sm" href="javascript:void(0)" aria-label="Edit" data-toggle="tooltip" data-placement="top" title="Edit" (click)="editRecord(row, addModal)">
+                          <i class="link-icon icon-note"></i>
+                        </a>&nbsp;
+                        <a class="btn btn-danger btn-sm delete" href="javascript:void(0)" aria-label="Delete" data-toggle="tooltip" data-placement="top" title="Delete" (click)="deleteInactiveRecord(data, baseUrl)">
+                            <i class="link-icon icon-trash"></i>
+                        </a>
+                      </td>
+                  </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+                </tr>
+              </table>
+
+              <mat-paginator [showFirstLastButtons]='true' [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <ng-template #addModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Stakeholder</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="recordForm">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label for="">Name</label>
+                <input type="text" class="form-control" formControlName="name"
+                  [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                <mat-error *ngIf="submitted && f.name.errors">
+                  <mat-error *ngIf="f.name.errors.required">Name is required</mat-error>
+                </mat-error>
+              </div>
+              <div class="col-md-6 form-group">
+                  <label for="">Type</label>
+                    <select class="form-control" formControlName="type" [ngClass]="{ 'is-invalid': submitted && f.type.errors }">
+                        <option></option>
+                        <option *ngFor="let item of stakeholder_types" [value]="item.id">{{item.name}}</option>
+                      </select>
+                  <mat-error *ngIf="submitted && f.name.errors">
+                    <mat-error *ngIf="f.name.errors.required">Name is required</mat-error>
+                  </mat-error>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="">Description</label>
+                    <textarea cols="auto" class="form-control" rows="4" formControlName="description"></textarea>
+                    <mat-error *ngIf="submitted && f.description.errors">
+                      <mat-error *ngIf="f.description.errors.required">Description is required</mat-error>
+                    </mat-error>
+                  </div>
+              </div>
+              </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-warning" (click)="modal.close('Close click')">Close</button>
+      <button (click)="onSubmit()" class="btn btn-primary">Submit</button>
+    </div>
+  </ng-template>
