@@ -1,0 +1,18 @@
+Software resources
+i.	Programming language
+This system is developed by mainly Hyperledger. The coding functionality of the system ensures that it runs appropriately and fulfills the functional requirements of the system. Hyperledger has different frameworks that ensure integration modules and defines the overall coding aspect. Hyperledger Fabric framework (HLF) is used since it allows entities to conduct confidential transactions without passing information through a central authority. This is accomplished through different channels that run within the network, as well as the division of labor that characterizes the different nodes within the network. Lastly, it is important to remember that, unlike Bitcoin, which is a public chain, Hyperledger Fabric supports permissioned deployments.
+HLF offers a permissioned blockchain platform, including consensus models, membership service and smart contracts (“chain code”) written in Java, JavaScript or golang. It is just a platform for other projects to use and does not focus on any specific use case by itself.
+This system is written in JavaScript.
+
+ii.	Hyperledger Modules
+The Hyperledger modules are auxiliary software used for things like deploying and maintaining blockchains, examining the data on the ledgers, as well as tools to design, prototype, and extend blockchain networks.
+Hyperledger Composer provides a suite of tools for building blockchain business networks. These tools allow one to:
+	Model the business blockchain network
+	Generate REST APIs for interacting with the blockchain network
+	Generate a skeleton Angular application
+Hyperledger Composer is a node.js based modelling and development tool for distributed business applications built on HLF. It offers its own modelling language CTO, the creation of smart contracts and extensive testing capabilities. Composer sits on top of HLF and can directly interface with its containers, providing a level of abstraction between low-level processes and business logic (e.g. for identity management). It also provides a sandbox mode, “Composer Playground”, that simulates an HLF inside a web browser. This is great for developing and testing your model without actually going through the effort of deploying it on a real HLF.
+
+iii.	Google Chrome
+This platform is necessary for running the system itself since it is accessed through the browser. Google chrome is the best browser to use while interacting with the system due to the speed and quick responsive.
+
+
