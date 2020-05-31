@@ -15,4 +15,15 @@ Hyperledger Composer is a node.js based modelling and development tool for distr
 iii.	Google Chrome
 This platform is necessary for running the system itself since it is accessed through the browser. Google chrome is the best browser to use while interacting with the system due to the speed and quick responsive.
 
+Development Language for the User Interface
+a)	CSS
+CSS is the language for describing the presentation of Web pages, including colors, layout, and fonts. It allows one to adapt the presentation to different types of devices, such as large screens, small screens, or printers. CSS is independent of HTML and can be used with any XML-based markup language.
+
+b)	HTML  
+Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+
+c)	JavaScript
+JavaScript is a high level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language specification. Alongside HTML and CSS, it is one of the three essential technologies of World Wide Web content production; the majority of websites employ it and it is supported by all modern web browsers without plug-ins. JavaScript is prototype-based with first-class functions, making it a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles. It has an API for working with text, arrays, dates and regular expressions, but does not include any I/O, such as networking, storage or graphics facilities, relying for these upon the host environment in which it is embedded.
+AngularJS AngularJS is the most preferred framework for creating interactive components of a website. It was designed as a full-featured JavaScript framework to enhance simplicity and efficiency. AngularJS is very effective especially in creating dynamic, single page apps, and supporting MVC (Model View Controller) programming structure.
+
 
