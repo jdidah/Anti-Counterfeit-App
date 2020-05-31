@@ -1,1 +1,8 @@
+UI Testing
+This testing is conducted to determine the usability of the application. The ease of use of interaction with the application. It has to ensure all the users of the system are able to interact with the system without problems. The UI design meets the specification of all the users since the system is user friendly and everyone can easily navigate with much ease. Naming of the buttons and navigation panes makes it easier for all functional requirements to be established without needs for the user manual system
+
+UI Testing on Hyperledger Composer Playground
+After the packaging of the business definition into the business network archive one can generate a user interface on Hyperledger Composer Playground which is a web user interface to define and test business networks. It allows a business analyst to quickly import samples and prototype business logic that executes on the Web or Hyperledger Fabric runtime
+Playground is used locally to deploy and test our business network and the results are as shown below.
+
 
