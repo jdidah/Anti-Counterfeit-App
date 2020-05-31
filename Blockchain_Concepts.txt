@@ -1,0 +1,50 @@
+1.	Model File .cto
+The model file will defines the assets, participants and transactions on the network and their attributes. They are discussed in detail below.
+
+i.	Assets 
+Assets on the business network can be defined as items with a perceivable value that can be exchanged between members. An asset can be the tangible or intangible goods, services or property. An asset must have a unique identifier and can also have other properties. An example of intangible goods is an example of certificates or title deeds i.e a blockchain network to track the change of land ownership could have title deeds as its asset.
+An example of tangible goods could be electronic products. 
+In our case our asset is a phone which is the electronic product to be used and the unique identifier to be used is the serial number.
+
+ii.	Participants
+The business network will also participants who can be referred to as the members of the network and interact with each other. Each participant can be identified with a unique identity.
+Participants can have access to various transactions on the network based on various restrictions which are achieved based on their row
+The Participants on our network are:
+•	Manufacturer
+•	Wholesaler
+•	Retailer
+•	Consumer
+•	Government Agency-This will act as the system admin.
+
+iii.	Transactions
+When modelling the business network transactions are required which interact with the assets.
+For example in our case we have
+•	Transfer
+This transaction will involve all the participants except thae government agency. The need for this transaction is to make an imprint of the change of hands of the asset(phone)
+How it will work: The manufacturer will invoke the transfer transaction after the phoe is sold to the wholesaler and the wholesaler will invoke the same transaction when selling to the distributor and so on till the product gets to the consumer.
+The consumer is given permission to invoke the transfer transaction in a scenario where they are selling the product as a second hand product.
+ 
+•	Adding Participants.
+This the task of the government agency which will be acting as the system admin of our system. They are the only ones given access to invoke this transaction.
+Under this there are various transactions to add each of the participants on the network i.e
+	Add Manufacturer
+	Add Wholesaler 
+	Add Retailer
+	Add Consumer
+
+•	Create Asset
+This is done by the manufacturer where they add the product they are manufacturing to the network.
+The unique identifier of our asset is a serial number which is what they will input to the network.
+2.	Script File .js  
+This file consists of the transaction functions. Transaction functions defines the participants and assets that are affected by the transaction. 
+For example The Create Manufacturer transaction in our case extends the attribute of the manufacturer where when it is invoked a new manufacturer is added on to the network.
+
+3.	Access Control.acl 
+The access control rules are defined in this rule. As mentioned above some restrictions are invoked for the different partcipants. These restrictions or rules are defined on the access control file.
+An example of an access rule is the ‘add participant’ transaction. This transaction is restricted to the system admin only who is the government agency in our case.
+
+4.	Query File 
+This file defines the queries which contain a WHERE clause, which defines the criteria by which assets or participants are selected. Queries are also used to return data about the blockchain world-state.
+ 
+The four files are packaged and exported to an archive known as the Business Network Archive .bna  which is ready to be deployed.
+
