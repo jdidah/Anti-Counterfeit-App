@@ -9,5 +9,16 @@ Software requirements
 3.	Hyperledger Fabric
 4.	Browser (Chrome or Mozilla Firefox)
 
+Recommended Software installations
+•	Operating Systems: Ubuntu Linux 14.04 / 16.04 LTS (both 64-bit), or Mac OS 10.12 
+•	Docker Engine: Version 17.03 or higher 
+•	Docker-Compose: Version 1.8 or higher 
+•	Node: 8.9 or higher 
+•	npm: v5.x 
+•	git: 2.9.x or higher.
+•	Hyperledger fabric v11
+•	Hyperledger composer v1.9
+
+
 Hyperledger Composer is an extensive, open development toolset for building blockchain business networks that make it simple and fast for business owners and developers to create and develop blockchain applications to solve business problems.
 
