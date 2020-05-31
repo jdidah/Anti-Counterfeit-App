@@ -1,4 +1,14 @@
-//Instructions for the project
+//Instructions for Deployment
+
+Deployment on Hyperledger Composer. 
+	REST SERVER
 The Hyperledger Composer REST Server automatically generates a Open API REST API for a business network. The REST Server converts the Composer model for a business network into an Open API definition, and at runtime implements Create, Read, Update and Delete support for assets and participants and allows transactions to be submitted for processing or retrieved.
+
+	PLAYGROUND WEB USER INTERFACE
+After the packaging of the business definition into the business network archive one can generate a user interface on Hyperledger Composer Playground which is a web user interface to define and test business networks. It allows a business analyst to quickly import samples and prototype business logic that executes on the Web or Hyperledger Fabric runtime
+
+Conclusion
+After in-depth research of blockchain, where both limitations and benefits were looked into, blockchain concepts form a revolutionary idea that could change the way the supply chain is managed
+
 
 Troubleshoot!!!
