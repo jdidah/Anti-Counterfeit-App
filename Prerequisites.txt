@@ -1,0 +1,11 @@
+Project requirements 
+
+Hardware requirements
+1. A laptop with minimum 4GB RAM, processor speed of 2GHz core i5 and 500 GB Hard Disk Drive.
+
+Software requirements
+1.	Linux (Ubuntu 16.04)
+2.	Hyperledger Composer
+3.	Hyperledger Fabric
+4.	Browser (Chrome or Mozilla Firefox)
+
