@@ -9,3 +9,5 @@ Software requirements
 3.	Hyperledger Fabric
 4.	Browser (Chrome or Mozilla Firefox)
 
+Hyperledger Composer is an extensive, open development toolset for building blockchain business networks that make it simple and fast for business owners and developers to create and develop blockchain applications to solve business problems.
+
